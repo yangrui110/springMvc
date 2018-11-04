@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration    
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">      
+<!-- 全局的seetting的配置 -->  
+<configuration>   
+<!-- 定义别名  -->
+<typeAliases> 
+<!-- 批量别名的定义  用于resultType 指定包名  自动定义别名 也就是类名多个包 多个packge-->
+<package name="cn.sjzc.pojo"/>
+<!-- <package name="cn.sjzc.pojo"/> -->
+</typeAliases>      
+</configuration>

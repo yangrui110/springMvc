@@ -1,0 +1,31 @@
+package com.yangrui.ez;
+
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import com.yangrui.ez.mvc.RootConfig;
+import com.yangrui.ez.mvc.WebConfig;
+
+
+public class BasicMvc extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		System.out.println("root config");
+		// TODO Auto-generated method stub
+		return new  Class<?>[] {RootConfig.class};
+	}
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		System.out.println("web config");
+		return new  Class<?>[] {WebConfig.class};
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		//拦截所有请求，包括静态资源，但是不包括.jsp等等界面
+		//若写的是/*,则拦截所有的界面
+		return new String[] {"/"};
+	}
+
+}

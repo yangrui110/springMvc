@@ -1,0 +1,28 @@
+package com.yangrui.sanguo.config;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+
+@Configuration
+public class BaseConfig {
+
+	@Bean
+	public DataSource dataSource() throws Exception {
+		ComboPooledDataSource dataSource=new ComboPooledDataSource();
+		dataSource.setDriverClass("com.mysql.jdbc.Driver");
+		dataSource.setUser("root");
+		dataSource.setPassword("134167");
+		dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/mvc?useUnicode=true&characterEncoding=UTF-8");
+		dataSource.setMaxPoolSize(3);
+		dataSource.setMinPoolSize(1);
+		dataSource.setCheckoutTimeout(10000);
+		dataSource.setAcquireRetryAttempts(10);
+		return dataSource;
+	}
+	
+
+}

@@ -1,0 +1,3 @@
+useGeneratedKeys=true
+useColumnLabel=true
+mapUnderscoreToCamelCase=true

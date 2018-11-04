@@ -1,0 +1,5 @@
+package com.yangrui.bo.entity;
+
+public class Course {
+
+}

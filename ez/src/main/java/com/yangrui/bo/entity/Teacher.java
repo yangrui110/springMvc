@@ -1,0 +1,12 @@
+package com.yangrui.bo.entity;
+
+import java.util.List;
+
+import lombok.Data;
+@Data
+public class Teacher {
+
+	private String id;
+	private String name;
+	private List<Student> students;
+}

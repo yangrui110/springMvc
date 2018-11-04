@@ -1,0 +1,27 @@
+package com.yangrui.sanguo.service.impl;
+
+import static org.junit.Assert.assertEquals;
+import java.util.Map;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.yangrui.sanguo.dao.StudentDao;
+import com.yangrui.sanguo.entity.Student;
+import com.yangrui.sanguo.service.StudentService;
+
+@Service
+public class StudentServiceImpl implements StudentService{
+
+	@Autowired
+	private StudentDao studentDao;;
+	@Override
+	public List<Student> query() {
+		// TODO Auto-generated method stub
+		List<Student> list=studentDao.queryAll();
+		assertEquals("杨瑞", list.get(0).getName());
+		return list;
+	}
+
+}

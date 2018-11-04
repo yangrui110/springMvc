@@ -1,0 +1,5 @@
+package com.yangrui.sanguo.service;
+
+public interface StudentService {
+
+}

@@ -1,0 +1,25 @@
+package com.yangrui.bo;
+
+import java.util.List;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.context.annotation.ComponentScan.Filter;
+
+@EnableWebMvc
+@ComponentScan(value="com.yangrui.bo",includeFilters= {
+		@Filter(type=FilterType.ANNOTATION,classes= {Controller.class})
+},useDefaultFilters=false)
+public class WebConfig implements WebMvcConfigurer{
+
+	@Override
+	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

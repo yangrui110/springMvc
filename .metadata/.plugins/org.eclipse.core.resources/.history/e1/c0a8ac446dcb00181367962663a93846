@@ -1,0 +1,5 @@
+package com.yangrui.bo.dao;
+
+public interface StudentDao {
+
+}

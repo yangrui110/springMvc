@@ -1,0 +1,14 @@
+package com.yangrui.sanguo.exception;
+
+public class CommonException extends RuntimeException {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private int code;
+	private String msg;
+	private String url;
+
+}

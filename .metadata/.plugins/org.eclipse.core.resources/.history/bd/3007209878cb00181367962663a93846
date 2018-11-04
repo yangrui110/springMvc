@@ -1,0 +1,54 @@
+package com.yangrui.bo;
+
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.print.attribute.standard.Media;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.BufferedImageHttpMessageConverter;
+import org.springframework.http.converter.ByteArrayHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import com.alibaba.fastjson.support.config.FastJsonConfig;
+import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+
+import org.springframework.context.annotation.ComponentScan.Filter;
+
+@Configuration
+@EnableWebMvc
+@ComponentScan(value="com.yangrui.bo",includeFilters= {
+		@Filter(type=FilterType.ANNOTATION,classes= {Controller.class})
+},useDefaultFilters=false)
+public class WebConfig implements WebMvcConfigurer{
+/*
+	@Override
+	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+		// TODO Auto-generated method stub
+		StringHttpMessageConverter stringHttpMessageConverter=new StringHttpMessageConverter();
+		ByteArrayHttpMessageConverter byteArrayHttpMessageConverter=new ByteArrayHttpMessageConverter();
+		BufferedImageHttpMessageConverter buff=new BufferedImageHttpMessageConverter();
+		converters.add(stringHttpMessageConverter);
+		converters.add(byteArrayHttpMessageConverter);
+		converters.add(buff);
+		FastJsonHttpMessageConverter fastJsonHttpMessageConverter=new FastJsonHttpMessageConverter();
+		FastJsonConfig fastJsonConfig=new FastJsonConfig();
+		fastJsonConfig.setCharset(Charset.forName("UTF-8"));
+		fastJsonConfig.setDateFormat("yyyy-MM-dd HH:mm:ss");
+		fastJsonHttpMessageConverter.setFastJsonConfig(fastJsonConfig);
+		List<MediaType> lists=new ArrayList<>();
+		lists.add(MediaType.APPLICATION_JSON_UTF8);
+		lists.add(MediaType.TEXT_HTML);
+		fastJsonHttpMessageConverter.setSupportedMediaTypes(lists);
+		
+	}*/
+
+}

@@ -1,0 +1,5 @@
+package com.yangrui.sanguo.exception;
+
+public class BaseException extends RuntimeException {
+
+}

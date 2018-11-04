@@ -1,0 +1,7 @@
+package com.yangrui.sanguo.dao;
+
+import com.yangrui.sanguo.BaseTest;
+
+public class StudentDaoTest extends BaseTest {
+
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration    
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">      
+	<!-- 全局的seetting的配置 -->  
+	<configuration>   
+		<settings>
+			
+		</settings>
+	</configuration>

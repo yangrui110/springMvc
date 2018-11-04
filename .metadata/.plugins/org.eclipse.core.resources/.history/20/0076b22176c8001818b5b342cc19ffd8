@@ -1,0 +1,5 @@
+package com.yangrui.sanguo.dao;
+
+public interface StudentDao {
+
+}

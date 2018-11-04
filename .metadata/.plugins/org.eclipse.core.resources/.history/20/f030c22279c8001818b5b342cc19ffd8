@@ -1,0 +1,21 @@
+package com.yangrui.sanguo.dao;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.yangrui.sanguo.BaseTest;
+import com.yangrui.sanguo.entity.Student;
+
+public class StudentDaoTest extends BaseTest {
+
+	@Autowired
+	private StudentDao studentDao;
+	
+	public void testQuery() {
+		List<Student> lists=studentDao.queryAll();
+		assertEquals(1, lists);
+	}
+}

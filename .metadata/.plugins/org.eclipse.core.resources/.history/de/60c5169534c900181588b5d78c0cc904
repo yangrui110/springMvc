@@ -1,0 +1,39 @@
+package com.yangrui.sanguo.exception;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
+public class BaseException implements HandlerExceptionResolver {
+
+	@Override
+	public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler,
+			Exception ex) {
+		// TODO Auto-generated method stub
+		ExceptionEntity entity=new ExceptionEntity();
+		String path=request.getContextPath()+request.getRequestURI();
+		entity.setPath(path);
+		entity.setCode(500);
+		entity.setMsg("出错啦");
+		JSON object=(JSON) JSONObject.toJSON(entity);
+		String result=object.toJSONString();
+		response.setCharacterEncoding("utf-8");
+		try {
+			response.setContentType("text/html; charset=utf-8");
+			response.getWriter().print(result);
+			return new ModelAndView();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return new ModelAndView("error");
+	}
+
+}

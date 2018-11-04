@@ -1,0 +1,18 @@
+package com.yangrui.ez;
+
+import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class BasicTest {
+
+	@Test
+	public void test() {
+
+		AnnotationConfigApplicationContext configApplicationContext=new AnnotationConfigApplicationContext();
+		String[] ars=configApplicationContext.getBeanDefinitionNames();
+		for (String string : ars) {
+			System.out.println(string);
+		}
+	}
+	
+}

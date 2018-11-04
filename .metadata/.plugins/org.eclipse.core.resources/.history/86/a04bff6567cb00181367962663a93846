@@ -1,0 +1,13 @@
+package com.yangrui.bo;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScan.Filter;
+import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.FilterType;
+
+@ComponentScan(value="com.yangrui.bo",excludeFilters= {
+		@Filter(type=FilterType.ANNOTATION,classes= {Controller.class})
+})
+public class RootConfig {
+
+}

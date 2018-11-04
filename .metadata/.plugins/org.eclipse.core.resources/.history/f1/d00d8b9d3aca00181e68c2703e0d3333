@@ -1,0 +1,5 @@
+package com.yangrui.sanguo.config;
+
+public class BaseConfig {
+
+}

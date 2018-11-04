@@ -1,0 +1,7 @@
+package com.yangrui.bo.exception;
+
+import org.springframework.web.servlet.handler.HandlerExceptionResolverComposite;
+
+public class BaseException extends HandlerExceptionResolverComposite {
+
+}
